@@ -1,0 +1,180 @@
+{
+  ConstraintSets: {
+    start: {
+      surface: {
+        custom: { height: 48, width:226, corner:50 },
+      },
+      avatar: {
+        start: ['parent', 'start', 16],
+        top: ['parent', 'top'],
+        bottom: ['parent', 'bottom'],
+        transitionZ: 1,
+        alpha:0
+      },
+      nameLabel: {
+        start: ['icCall', 'end', 4],
+        top: ['icCall', 'top'],
+        bottom: ['icCall', 'bottom'],
+        transitionZ: 1,
+        custom: { size: 18, color: '#ffffff' }
+      },
+      nameStartLabel: {
+        start: ['parent', 'start', 24],
+        top: ['parent', 'top', 24],
+        bottom: ['parent', 'bottom', 24],
+        transitionZ: 1,
+        alpha:0,
+        custom: { size: 48 }
+      },
+      lastNameLabel: {
+        start: ['parent', 'start', 16],
+        top: ['nameStartLabel', 'bottom'],
+        transitionZ: 1,
+        alpha:0
+      },
+      descriptionLabel: {
+        start: ['avatar', 'end', 4],
+        top: ['lastNameLabel', 'bottom'],
+        bottom: ['parent', 'bottom'],
+        transitionZ: 1,
+        alpha:0
+      },
+      icCall: {
+        start: ['parent', 'start', 16],
+        top: ['parent', 'top'],
+        bottom: ['parent', 'bottom'],
+        transitionZ: 1,
+      },
+      code: {
+        start: ['parent', 'start', 16],
+        top: ['parent', 'top', 16],
+        transitionZ: 1,
+        alpha:0
+      },
+      icVoice: {
+        end: ['parent', 'end', 16],
+        top: ['parent', 'top'],
+        bottom: ['parent', 'bottom'],
+        transitionZ: 1,
+      },
+      durationLabel: {
+        end: ['parent', 'end', 16],
+        top: ['parent', 'top'],
+        bottom: ['parent', 'bottom'],
+        transitionZ: 1,
+        custom: { size: 18}
+      },
+      bagInfo: {
+        top: ['nameLabel', 'bottom'],
+        end: ['parent', 'end', 16],
+        transitionZ: 1,
+        alpha: 0
+      },
+      arrow: {
+        start: ['parent', 'start', 16],
+        end: ['parent', 'end', 16],
+        top: ['parent', 'top',16],
+        bottom:['parent','bottom'],
+        transitionZ: 1,
+        alpha: 0,
+        rotationZ :90,
+      }
+    },
+    end: {
+      surface: {
+        custom: { height: 188, width: 340, corner:10 }
+      },
+      avatar: {
+        start: ['parent', 'start', 16],
+        top: ['nameLabel', 'bottom'],
+        bottom: ['parent', 'bottom'],
+        transitionZ: 1,
+        alpha: 1
+      },
+      nameLabel: {
+        end: ['parent', 'end', 24],
+        top: ['parent', 'top', 24],
+        bottom: ['parent', 'bottom', 24],
+        transitionZ: 1,
+        alpha:1,
+        custom: { size: 48, color: '#50C7C1' }
+      },
+      nameStartLabel: {
+        start: ['parent', 'start', 24],
+        top: ['parent', 'top', 24],
+        bottom: ['parent', 'bottom', 24],
+        transitionZ: 1,
+        alpha:1,
+        custom: { size: 48 }
+      },
+      lastNameLabel: {
+        start: ['parent', 'start', 16],
+        top: ['nameStartLabel', 'bottom'],
+        transitionZ: 1,
+        alpha:1
+      },
+      descriptionLabel: {
+        start: ['parent', 'start', 16],
+        top: ['lastNameLabel', 'bottom'],
+        transitionZ: 1,
+        alpha:1
+      },
+      durationLabel: {
+        start: ['descriptionLabel', 'end',2],
+        top: ['descriptionLabel', 'top'],
+        bottom: ['descriptionLabel', 'bottom'],
+        transitionZ: 1,
+        custom: { size: 18},
+      },
+      icCall: {
+        start: ['parent', 'start', 16],
+        top: ['parent', 'top', 16],
+        transitionZ: 1,
+        alpha: 0
+      },
+      icVoice: {
+        end: ['parent', 'end', 16],
+        top: ['parent', 'top'],
+        bottom: ['parent', 'bottom'],
+        transitionZ: 1,
+        alpha: 0
+      },
+      endCall: {
+        top: ['parent', 'top'],
+        bottom: ['parent', 'bottom'],
+        end: ['parent', 'end', 16],
+        transitionZ: 1,
+        alpha: 1
+      },
+      arrow: {
+        start: ['parent', 'start', 16],
+        end: ['parent', 'end', 16],
+        top: ['parent', 'top',16],
+        bottom:['parent','bottom'],
+        transitionZ: 1,
+        alpha: 1,
+        rotationZ :90,
+      },
+      bagInfo: {
+        top: ['nameLabel', 'bottom'],
+        start: ['nameLabel', 'start'],
+        bottom: ['parent', 'bottom'],
+        end: ['parent', 'end', 16],
+        transitionZ: 1,
+        alpha: 1
+      },
+      code: {
+        start: ['parent', 'start', 16],
+        top: ['parent', 'top', 16],
+        transitionZ: 1,
+        alpha:1,
+      }
+    },
+    Transitions: {
+      default: {
+        from: 'start',
+        to: 'end',
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+ConstraintSets: {
+start: {
+surface: {
+custom: { height: 48, width: 196, corner:50
+},
+},
+avatar: {
+start: ['parent', 'start', 16],
+top: ['parent', 'top'],
+bottom: ['parent', 'bottom'],
+transitionZ: 1,
+alpha: 0
+},
+nameLabel: {
+start: ['avatar', 'end', 4],
+top: ['parent', 'top'],
+bottom: ['lastNameLabel', 'top'],
+transitionZ: 1,
+alpha: 0
+},
+lastNameLabel: {
+start: ['avatar', 'end', 4],
+top: ['nameLabel', 'bottom'],
+bottom: ['parent', 'bottom'],
+transitionZ: 1,
+alpha: 0
+},
+icCall: {
+start: ['parent', 'start', 16],
+top: ['parent', 'top'],
+bottom: ['parent', 'bottom'],
+transitionZ: 1,
+},
+icVoice: {
+end: ['parent', 'end', 16],
+top: ['parent', 'top'],
+bottom: ['parent', 'bottom'],
+transitionZ: 1,
+},
+durationLabel: {
+start: ['icCall', 'end', 16],
+top: ['parent', 'top'],
+bottom: ['parent', 'bottom'],
+transitionZ: 1,
+custom: {
+size: 18}
+},
+endCall: {
+top: ['parent', 'top'],
+bottom: ['parent', 'bottom'],
+end: ['parent', 'end', 16],
+transitionZ: 1,
+alpha: 0
+},
+startCall: {
+end: ['endCall', 'start', 16],
+top: ['parent', 'top'],
+bottom: ['parent', 'bottom'],
+transitionZ: 1,
+alpha: 0
+}
+},
+end: {
+surface: {
+custom: { height: 98, width: 340, corner:10
+}
+},
+avatar: {
+start: ['parent', 'start', 16],
+top: ['parent', 'top'],
+bottom: ['parent', 'bottom'],
+transitionZ: 1,
+alpha: 1
+},
+nameLabel: {
+start: ['avatar', 'end', 4],
+top: ['parent', 'top', 24],
+bottom: ['lastNameLabel', 'top'],
+transitionZ: 1,
+alpha: 1
+},
+lastNameLabel: {
+start: ['avatar', 'end', 4],
+top: ['nameLabel', 'bottom'],
+bottom: ['parent', 'bottom', 24],
+transitionZ: 1,
+alpha: 1
+},
+durationLabel: {
+start: ['icCall', 'end', 16],
+top: ['parent', 'top'],
+bottom: ['parent', 'bottom'],
+transitionZ: 1,
+custom: {
+size: 18},
+alpha: 0
+},
+icCall: {
+start: ['parent', 'start'],
+top: ['parent', 'top'],
+bottom: ['parent', 'bottom'],
+end: ['parent', 'end'],
+transitionZ: 1,
+alpha: 0
+},
+icVoice: {
+end: ['parent', 'end', 16],
+top: ['parent', 'top'],
+bottom: ['parent', 'bottom'],
+transitionZ: 1,
+alpha: 0
+},
+durationLabel: {
+start: ['icCall', 'end', 16],
+top: ['parent', 'top'],
+bottom: ['parent', 'bottom'],
+transitionZ: 1,
+custom: {
+size: 48}
+},
+endCall: {
+top: ['parent', 'top'],
+bottom: ['parent', 'bottom'],
+end: ['parent', 'end', 16],
+transitionZ: 1,
+alpha: 1
+},
+startCall: {
+end: ['endCall', 'start', 16],
+top: ['parent', 'top'],
+bottom: ['parent', 'bottom'],
+transitionZ: 1,
+alpha: 1
+}
+},
+Transitions: {
+default: {
+from: 'start',
+to: 'end',
+}
+}
+}
+}
