@@ -1,6 +1,6 @@
 # Dynamic Island with Compose MotionLayout
 ## Samples
-<img src="https://user-images.githubusercontent.com/24611045/191322005-2425e156-4994-4b5f-9428-d44b2e62ccc4.mp4"  width="300"/>
+<img src="https://user-images.githubusercontent.com/24611045/194127476-a71c867d-3149-4373-8fd2-64b7b3c7154c.mp4"  width="300"/>
 
 
 ## Find me at:
